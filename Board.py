@@ -6,6 +6,10 @@ import copy
 class Board(object):
 
     def __init__(self, player=None, computer=None):
+        """
+
+        :rtype: object
+        """
         self.tokens = [' '] * 9
         self.player_token = player
         self.computer_token = computer
