@@ -6,9 +6,9 @@ while True:
     board = Board.Board()
     board.inputPlayerLetter()
     turn = board.firstMove()
-    print 'The %s will go first.' % turn
+    print('The %s will go first.' % turn)
     if turn == 'player':
-        print board.drawBoard()
+        print(board.drawBoard())
 
     playing = True
 
@@ -19,13 +19,13 @@ while True:
 
             outcome = board.isWinner()
             if outcome == 'win':
-                print board.drawBoard()
+                print(board.drawBoard())
                 print('Hooray! You have won the game!')
                 playing = False
                 break
             elif outcome == 'draw':
 
-                print board.drawBoard()
+                print(board.drawBoard())
                 print('The game is a tie!')
                 playing = False
                 break
@@ -39,12 +39,12 @@ while True:
 
             outcome = board.isWinner()
             if outcome == 'win':
-                print board.drawBoard()
+                print(board.drawBoard())
                 print('The computer has beaten you! You lose.')
                 playing = False
                 break
             elif outcome == 'draw':
-                print board.drawBoard()
+                print(board.drawBoard())
                 print('The game is a tie!')
                 playing = False
                 break
@@ -52,5 +52,5 @@ while True:
                 turn = 'player'
 
     if not board.playAgain():
-        print "Ok, I'll go play a nice game of global thermonuclear war."
+        print("Ok, I'll go play a nice game of global thermonuclear war.")
         break
