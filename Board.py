@@ -36,7 +36,7 @@ class Board(object):
             brain.evaluateMove(p=self.computer_token, board=tokens)
             best = brain.best_move
         self.addToken(self.computer_token, int(best))
-        print self.drawBoard()
+        print(self.drawBoard())
 
     def take_center(self):
         """figure out if we can have the center square
@@ -58,16 +58,16 @@ class Board(object):
             try:
                 int(move)
             except:
-                print "Please enter a digit"
-                print self.drawBoard()
+                print("Please enter a digit")
+                print(self.drawBoard())
                 continue
             try:
                 self.addToken(self.player_token, int(move) - 1)#make the move into an index of the board
-                print self.drawBoard()
+                print(self.drawBoard())
                 break
             except TokenPlacementException:
-                print "please select an empty spot"
-                print self.drawBoard()
+                print("please select an empty spot")
+                print(self.drawBoard())
 
 
     def firstMove(self):
@@ -134,4 +134,4 @@ class Board(object):
                 break
 
     def _raw_input(self):
-        return raw_input()
+        return input()
